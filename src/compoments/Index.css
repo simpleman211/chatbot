@@ -1,0 +1,52 @@
+/* CSS cho switch container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.bg-frontend {
+    background: #1d9ad6;/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* Ẩn checkbox thực tế */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+/* Hình tròn bên trong slider */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+/* Khi checkbox được chọn */
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+/* Di chuyển hình tròn khi checkbox được chọn */
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
